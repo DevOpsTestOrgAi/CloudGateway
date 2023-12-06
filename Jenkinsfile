@@ -44,7 +44,7 @@ pipeline {
                             sh "${mvnCMD} sonar:sonar"
                         }
                     }
-                    slackSend message: 'AI-Extension backend api: Sonar analysis completed. Check http://172.174.23.176:9000/'
+                    slackSend message: 'AI-Extension ai extension: Sonar analysis completed. Check http://172.174.23.176:9000/'
                 }
             }
         }
@@ -68,7 +68,7 @@ pipeline {
                         dockerImage.push("${imageTag}")
                     }
                 }
-                slackSend message: "AI-Extension backend api: New Artifact was Pushed to Docker Hub Repo with tag ${imageTag}"
+                slackSend message: "AI-Extension cloud gateway: New Artifact was Pushed to Docker Hub Repo with tag ${imageTag}"
             }
         }
         stage('Update Manifests and Push to Git') {
