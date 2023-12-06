@@ -18,7 +18,7 @@ spring:
         - id : API-SERVICE
           uri: http://api-service-svc
           predicates:
-            - Path=/api/**
+            - Path=/api/v1/suggestions/**
 
         - id: SCARPPER-SERVICE
           uri: http://scrapper-service-svc
