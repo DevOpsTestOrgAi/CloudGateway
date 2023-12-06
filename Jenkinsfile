@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        registryName = 'sk09devops/cloud-gateway' // Updated Docker Hub repository name
-        registryCredential = 'DOCKERHUB' // Updated credential name
+        registryName = 'sk09devops/cloud-gateway'
+        registryCredential = 'DOCKERHUB'
         dockerImage = ''
         registryUrl = ''
         mvnHome = tool name: 'maven', type: 'maven'
         mvnCMD = "${mvnHome}/bin/mvn "
-        imageTag = "latest-${BUILD_NUMBER}" // Default tag with build number
+        imageTag = "latest-${BUILD_NUMBER}"
     }
 
     stages {
@@ -44,7 +44,7 @@ pipeline {
                             sh "${mvnCMD} sonar:sonar"
                         }
                     }
-                    slackSend message: 'AI-Extension ai extension: Sonar analysis completed. Check http://172.174.23.176:9000/'
+                    slackSend message: 'AI-Extension  cloud gateway: Sonar analysis completed. Check http://172.174.23.176:9000/'
                 }
             }
         }
