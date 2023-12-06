@@ -89,7 +89,7 @@ pipeline {
                     
                     def newImageLine = "image: ${registryName}:${imageTag}"
             
-                    sh "sed -i 's|image: sk09devops/ai-project:latest.*|${newImageLine}|' ${manifestsDir}/cloudgateway-deployment.yml"
+                    sh "sed -i 's|image: sk09devops/ai-project:latest.*|${newImageLine}|' ${manifestsDir}/gateway.yml"
 
 
                     
