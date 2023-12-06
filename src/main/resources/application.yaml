@@ -15,7 +15,7 @@ spring:
             allowedMethods: "*"
 
       routes:
-        - id : API-SERVICE
+        - id : search
           uri: http://api-service-svc
           predicates:
             - Path=/api/v1/suggestions/**
