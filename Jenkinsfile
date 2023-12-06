@@ -102,6 +102,7 @@ pipeline {
                             sh "git push  https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/DevOpsTestOrgAi/GitOps.git HEAD:main"
                         }
                     }
+                    sh "rm -rf ${cloneDir}"
                 }
             }
         }
